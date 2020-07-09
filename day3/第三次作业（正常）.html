@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .img{
+            width: 500px;
+            height: 50px;
+        }
+        .before{
+            
+            display:block ;
+            position: absolute;
+            top: -10px;
+            left: 0px;
+            width: 100%;
+            height: 60px;
+            background-color: rgb(230,230,230);
+            border: 2px dotted rgb(200,200,200);
+            border-radius: 5px;
+         
+           
+        }
+        .after{
+            
+            display: block;
+            position: absolute;
+            top: 10px;
+            left: 0px;
+            font-size: 16px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-style: normal;
+            width: 500px;
+            text-align: center;
+            color: rgb(100,100,100);
+        }
+    </style>
+</head>
+<body>
+    <div style="position:relative;width: 500px; height: 50px;margin-top: 100px;">
+        <div class="before"></div>
+        <img src="./image/磨牙1.png" alt="加载失败">
+        <div class="after">Broken Image of 加载失败</div>
+    </div>
+   
+</body>
+</html>

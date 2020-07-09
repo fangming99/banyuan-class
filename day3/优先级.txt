@@ -1,0 +1,12 @@
+li                                       0001
+ul li                                   0002 
+ul ol+li                             0003
+ul ol+li                             0003
+h1 + *[REL=up]              001,1      
+ul ol li.red                       001,3 
+li.red.level                       002,1  
+a1.a2.a3.a4.a5.a6.a7.a8.a9.a10.a11         00,10,0
+#x34y                                                             0,1,00 
+li:first-child h2 .title                                      00,2,2
+#nav .selected > a:hover                             0,1,2,1
+html body #nav .selected > a:hover          0,1,2,3
