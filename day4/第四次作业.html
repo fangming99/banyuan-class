@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .top{
+            position: relative;
+            top: 20px;
+        }
+
+        .xinwen tr td:hover{
+            color: blue;
+            
+        }
+        .xinwen tr td{
+            font-size: 13px;
+            width: 50px;
+            text-align: center;
+        }
+        .denglu tr td{
+            font-size: 12px;
+            width: 50px;
+            text-align: center;
+        }
+        .button1{
+            background-color: rgb(102, 102, 235);
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+        }
+        .denglu{
+            position: relative;
+            left: 1230px;
+            top: -30px;
+        }
+        .denglu tr td:hover{
+            color: blue;
+        }
+      
+        .body img{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+        .middle a{
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            font-family: serif;
+            padding-left: 39px;
+            text-align: center;
+        }
+        .middle{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top:35%;
+        }
+        .shuru{
+            position: absolute;
+            left: 50%;
+            top: 25%;
+            transform: translateX(-50%);
+        }
+        .shuru input{
+            width: 548px;
+            height: 44px;
+            border-color: rgb(99, 99, 240);
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+        .shuru button{
+            position: relative;
+            top: 2px;
+            left: -6px;
+            width: 108px;
+            height: 50px;
+            background-color: rgb(99, 99, 240);
+            color: white;
+            font-size: 17px;
+            border: 0px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+        #a1{
+            position: relative;
+            right: 70px;
+            top: 15px;
+        }
+        #a2{
+            position: relative;
+            right: 40px;
+            top: 15px;
+        }
+        .footer{
+            color: grey;
+            font-size: 10px;
+            
+        }
+      
+        .bottoml{
+            position: relative;
+            top: 690px;
+        }
+        .bottoml tr td{
+            text-align: center;
+            padding-left: 20px;
+        }
+        .bottomr{
+            position: relative;
+            top: 665px;
+            left: 900px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="top">
+       <table class="xinwen">
+           <tr>
+               <td>新闻</td>
+               <td>hao123</td>
+               <td>地图</td>
+               <td>视频</td>
+               <td>贴吧</td>
+               <td>学术</td>
+               <td>更多</td>
+           </tr>
+       </table>
+
+        <table class="denglu">
+            <tr>
+                <td style="color: hotpink;">高考加油</td>
+                <td>设置</td>
+                <td><button class="button1">登录</button></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <div class="body">
+        <img src="./image/baidu.png" alt="加载失败" width="270px"height="129px">
+
+        <div class="shuru">
+            <input type="text" value="">
+            <a id="a1" href="#"><img src="./image/huatong.png" alt="加载失败"></a>
+            <a id="a2" href="#"><img src="./image/xiangji.png" alt="加载失败"></a>
+            <button>百度一下</button>
+        </div>
+
+        <div class="middle">
+            <a href="#">闪电估分</a>
+            <a href="#">高考作文</a>
+            <a href="#">高考真题</a>
+            <a href="#">高考大数据</a>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <table class="bottoml">
+            <tr>
+                <td>设为首页</td>
+                <td>关于百度</td>
+                <td>About Baidu</td>
+                <td>百度营销</td>
+                <td>使用百度前必读</td>
+                <td>意见反馈</td>
+                <td>帮助中心</td>
+            </tr>
+        </table>
+
+        <table class="bottomr">
+            <tr>
+                <td>©2020 Baidu </td>
+                <td>(京)-经营性-2017-0020</td>
+                <td>京公网安备11000002000001号</td>
+                <td>京ICP证030173号</td>
+            </tr>
+        </table>
+    </div>
+   
+    
+</body>
+</html>
