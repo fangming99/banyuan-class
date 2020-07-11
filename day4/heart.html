@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container{
+            width: 400px;
+            height: 500px;
+            /* border: 1px solid black; */
+            margin: 0 auto;
+            position: relative;
+            animation: heartbeat 0.5s infinite alternate;
+            margin-top: 100px;
+            
+        }
+        .child{
+            height: 200px;
+            width: 200px;
+            background-color:red ;
+            border-radius: 50%;
+            position: absolute;
+
+        }
+        .left{
+            left: 40px;
+        }
+        .right{
+            right: 40px;
+        }
+        .bottom{
+            width: 180px;
+            height: 180px;
+            background-color: red;
+            position: absolute;
+            top: 84px;
+            left: 110px;
+            transform: rotate(45deg);
+
+        }
+        @keyframes heartbeat{
+            from{}
+            to{
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="child left"></div>
+        <div class="child right"></div>
+
+        <div class="bottom"></div>
+
+    </div>
+   
+</body>
+</html>
