@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .body{
+            width: 400px;
+            height: 400px;
+            overflow: hidden;
+            margin-left: 200px;
+        }
+        .image{
+            width: 1600px;
+            font-size: 0px;
+            animation: demo 5s  infinite;
+        }
+        .mao{
+            width: 400px;
+            height: 300px;
+        }
+        @keyframes demo {
+            0%{
+                margin-left: 0px;
+
+            }
+            33%{
+                margin-left: -400px;
+            }
+            66%{
+                margin-left: -800px;
+                
+
+            }
+            100%{
+                margin-left: -1200px;
+
+
+            }
+          
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="image">
+            <img src="./image/fangao1.jpg" alt="" class="mao">
+            <img src="./image/fangao2.jpg" alt="" class="mao">
+            <img src="./image/fangao3.jpg" alt="" class="mao">
+            <img src="./image/fangao4.jpg" alt="" class="mao">
+        </div>
+    </div>
+</body>
+</html>
