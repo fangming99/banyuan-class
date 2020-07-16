@@ -19,6 +19,9 @@
     padding-left: 16px;
     text-decoration: none;
 }
+.header-first-img{
+    margin-top: 7px;
+}
 
 .octicon{
     margin-top: 10px;
@@ -47,15 +50,16 @@
 }
 .header-third{
     float: left;
-    height: 40px;
-    margin-top: 11px;
+    height: 53px;
+    box-sizing: border-box;
 }
 .header-third-a{
     padding-right: 16px;
     text-decoration: none;
     color: white;
+    line-height: 50px;
 
-}
+ }
 .header-forth{
     float: right;
     height: 53px;
@@ -70,11 +74,13 @@
 
 
 /* body */
-.body{
+body{
+    min-width: 1110px;
+}
+.container{
     height: 900px;
     /* background-color: yellow; */
     padding: 0px 290px 0px 270px;
-    min-width: 700px;
 }
 .middle{
     height: 800px;
@@ -289,6 +295,9 @@
     text-decoration: none;
     color: #24292E;
 }
+.middle-center-second a:hover{
+    color: #0366D6;
+}
 .middle-footer{
     margin: 32px 0px;
     height: 128px;
@@ -323,4 +332,7 @@
     text-decoration: none;
     font-size: 12px;
 
+}
+.middle-footer-ul li a:hover{
+    color: #0366D6;
 }
