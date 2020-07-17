@@ -78,8 +78,7 @@ body{
     min-width: 1110px;
 }
 .container{
-    height: 900px;
-    /* background-color: yellow; */
+    height: 800px;
     padding: 0px 290px 0px 270px;
 }
 .middle{
@@ -87,7 +86,16 @@ body{
     width: 100%;
     float: left;
     background-color: rgb(248, 246, 244);
+
 }
+.middle-inbox{
+    width: 650px;
+    height: 800px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+
 .left{
     height: 800px;
     width: 270px;
@@ -246,6 +254,7 @@ body{
     box-sizing: border-box;
     margin: 16px;
     background-color: white;
+    
 }
 .middle-top h3{
     font-size: 23px;
@@ -274,6 +283,9 @@ body{
     position: relative;
     top: 14px;
 }
+.middle-center{
+    margin-top: 252px;
+}
 .middle-top-a:hover{
     background-color: #0366D6;
     color: white;
@@ -297,6 +309,7 @@ body{
 }
 .middle-center-second a:hover{
     color: #0366D6;
+    fill: #0366D6;
 }
 .middle-footer{
     margin: 32px 0px;
