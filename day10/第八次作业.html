@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // var birthday=new Date(1999,01,07,14,40);
+    // var today=new Date();
+    // var year=today.getFullYear()-birthday.getFullYear();
+    // var month=Math.abs(today.getMonth()+1-birthday.getMonth()) ;
+    // var day=Math.abs(today.getDate()-birthday.getDate());
+    // var hour=Math.abs(today.getHours()-birthday.getHours());
+    // var minutes=Math.abs(today.getMinutes()-birthday.getMinutes());
+    // console.log('距离出生过了'+year+'年'+month+'月'+day+'日'+hour+'小时'+minutes+'分钟')
+
+
+
+    // var str = 'abcd123';
+    // // str 也有可能不是字符串
+    // function main(str){
+    //     if(str==null){
+    //         console.log('不是字符串');
+    //     }else{
+            // str=str.replace(str[0],str[0].toUpperCase());
+    //         console.log(str);
+    //     }
+    // }
+    // main(str);
+    // main(null);
+    // ===> 'Abcd123'
+
+
+
+
+
+    //假设
+    var str = 'd_h';
+    function main(str){
+        for(i=0;i<15;i++){
+        var m=str.charAt(i);
+        var n=str.charAt(i+1);
+        if(m==='_'){
+            str=str.replace(n,n.toUpperCase());
+            str=str.replace(str[i],'');
+        }
+        else{
+            continue;
+        }
+    }
+    console.log(str);
+
+}
+    main(str);
+
+    // 最后结果 'aBgfghHD'
+
+
+
+
+
+
+
+
+</script>
+
+
+</html>
