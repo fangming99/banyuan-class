@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            max-width: 525px;
+            /* height: 320px; */
+            background-color: rgb(240, 239, 239);
+            margin: 0px auto;
+            border: 1px solid rgb(204, 201, 201);
+        }
+        .top{
+            width: 525px;
+            height: 39px;
+            border-bottom: 1px solid rgb(204, 201, 201);
+        }
+        .top-p{
+            font-size: 22px;
+            margin-left: 30px;
+            color: grey;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .name{
+            border: 1px solid #DADADA;
+			color: #888;
+			height: 30px;
+			margin-bottom: 16px;
+			margin-right: 6px;
+			margin-top: 2px;
+			outline: 0 none;
+			padding: 3px 3px 3px 5px;
+			width: 70%;
+			font-size: 12px;
+            line-height:15px;
+            box-shadow: inset 0px 1px 4px #ECECEC;
+			-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+			-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+        }
+        .center{
+            margin-top: 30px;
+        }
+        .center span{
+            float: left;
+			width: 20%;
+			text-align: right;
+			padding-right: 10px;
+			margin-top: 10px;
+            color: #888; 
+			font-size: 12px;
+            
+        }
+
+        .bottom span{
+            float: left;
+			width: 20%;
+			text-align: right;
+			padding-right: 10px;
+			margin-top: 10px;
+            color: #888; 
+			font-size: 12px;
+        }
+        .password{
+            border: 1px solid #DADADA;
+			color: #888;
+			height: 30px;
+			margin-bottom: 16px;
+			margin-right: 6px;
+			margin-top: 2px;
+			outline: 0 none;
+			padding: 3px 3px 3px 5px;
+			width: 70%;
+			font-size: 12px;
+            line-height:15px;
+            box-shadow: inset 0px 1px 4px #ECECEC;
+			-moz-box-shadow: inset 0px 1px 4px #ECECEC;
+			-webkit-box-shadow: inset 0px 1px 4px #ECECEC;
+        }
+        .submitButton{
+            background: #E27575;
+			border: none;
+			padding: 10px 25px 10px 25px;
+			color: #FFF;
+			box-shadow: 1px 1px 5px #B6B6B6;
+			border-radius: 3px;
+			text-shadow: 1px 1px 1px #9E3F3F;
+            cursor: pointer;
+            margin-left: 119px;
+            margin-bottom: 20px;
+        }
+
+        		/* disabled */
+		.submitButton:disabled{
+		  border: 1px solid #999999;
+		  background-color: #cccccc;
+        }
+        .warning{
+			color:red;
+			text-align: center;
+			width: 100%;
+            margin-bottom: 10px;
+            border: none;
+		}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top"><p class="top-p">表单</p></div>
+
+        <div class="center">
+            <span> Your Name: </span><input type="text" name="name" placeholder="Your Full Name" class="name">
+        </div>
+
+        <div class="bottom">
+            <span> Your Password: </span><input type="text" name="name" placeholder="Valid Password" class="password">
+        </div>
+        <div class="footer">
+            <button type="button" class="submitButton"  id='submitButton' disabled>Send</button>
+        </div>
+
+    </div>
+</body>
+
+<script>
+            /* name input element */
+            var nameele = document.getElementsByClassName('name')[0];
+            /* passowrd input element */
+            var passwordele = document.getElementsByClassName('password')[0];
+            /* button element */
+            var buttonele = document.getElementsByClassName('submitButton')[0];
+            /* label */
+            var centerele = document.getElementsByClassName('center')[0];
+            var bottomele = document.getElementsByClassName('bottom')[0];
+
+        /* 检测结果 */
+        var nameTestResult = false;
+
+        var passowrdTestResult = false;
+
+        function checkName(){
+            // value
+            var name = nameele.value;
+            // reg
+            var partten = /^[a-zA-Z0-9_-]{4,16}$/;
+            var flag = partten.test(name);
+            var warningele = document.getElementsByClassName('warning name')[0];
+
+            if(flag){
+                // 清空warning
+                if(warningele){
+
+                    warningele.remove();
+                }
+            }else{
+                // 显示warning
+                var ele = createWarning('name','用户名输入错误，4到16位，字母，数字，下划线，减号');
+
+                if(!warningele){
+                    centerele.append(ele);
+                }
+                
+            }
+            nameTestResult = flag;
+            enableButton();
+        }
+        
+        /* 检测密码 */
+        function checkPassword(){
+            // value
+            var password = passwordele.value;
+            // reg
+            var partten = /^\w{8,15}$/;
+            var flag = partten.test(password);
+            var warningele = document.getElementsByClassName('warning password')[0];
+
+            if(flag){
+                // 清空warning
+
+                // ele 存在 remove
+                if(warningele){
+
+                    warningele.remove();
+                }
+
+            }else{
+                // 显示warning
+                var ele = createWarning('password','密码格式错误，password的长度不小于8位，不大于15位');
+                
+                // 如果ele不存在
+                if(!warningele){
+                    bottomele.append(ele);
+                }
+            }
+
+            passowrdTestResult = flag;
+
+            enableButton();
+        }
+        
+        
+        /* 激活button */
+        function enableButton(){
+            buttonele.disabled = !(nameTestResult && passowrdTestResult)
+        }
+        
+        /* 创建提示元素 */
+        function createWarning(target,content){
+            
+            var ele = document.createElement('div');
+            ele.className = 'warning ' + target;
+            ele.innerHTML = content;
+            return ele;
+        }
+        
+        /* 绑定事件 */
+        nameele.onblur = checkName;
+        passwordele.onblur = checkPassword;
+
+</script>
+
+</html>
