@@ -1,0 +1,71 @@
+{% extends 'content.njk' %}
+{%block style%}
+    <link rel='stylesheet', href='/css/todolist.css'>
+{%endblock%}
+{% block content %}
+{# <h1>{{title}}</h1> #}
+{# <p>Welcome use {{title}}</p> #}
+{# <div>{{content}}</div> #}
+
+
+{# {% block top%} #}
+
+{# <div>{{title|join('====')|capitalize}}</div> #}
+{# {%include 'text.njk'%} #}
+
+
+{# {%if male%}
+<div>this is a women</div>
+{%else%}
+<div>this is a men</div> #}
+{# {%endif%} #}
+
+{# 
+{%for item in news%}
+<div>{{item.name}}</div>
+{%endfor%}
+
+
+
+
+{%endblock%} #}
+
+
+
+
+
+{# {% block left%}
+<span>this is left</span>
+{%endblock%}
+
+{% block right%}
+<span>this is right</span>
+{%endblock%} #}
+
+
+
+
+    <div class="header">
+      <h2>To Do List</h2>
+      <input
+        class="input"
+        type="text"
+        placeholder="  请输入任务"
+        style="font-size: 17px;"
+      /><button class="button">Add</button>
+    </div>
+
+    <ul class="task-list">
+      <li class="task-item">任务1</li>
+      <li class="task-item">任务2</li>
+      <li class="task-item">任务3</li>
+    </ul>
+
+
+
+
+{% endblock %}
+
+{%block script%}
+<script src="/js/todolist.js"></script>
+{%endblock%}
