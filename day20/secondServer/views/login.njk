@@ -1,0 +1,58 @@
+{% extends 'layout.njk' %}
+{%block content%}
+    <div>
+        <span>用户名</span>
+        <input class="username"/>
+    </div>
+
+    <div>
+        <span>密码</span>
+        <input class="password"/>
+    </div>
+
+    <div>
+        <button class="login-btn">登录</button>
+    </div>
+
+    <div>
+        <input class="input1"/>
+    </div>
+
+    <div>
+        <input class="input2"/>
+    </div>
+
+    {%endblock%}
+
+    {%block script%}
+        <script>
+
+            let btn = document.getElementsByClassName("login-btn")[0];
+            let nameInput = document.getElementsByClassName("username")[0];
+            let passwordInput = document.getElementsByClassName("password")[0];
+            btn.onclick = function () {
+                if (nameInput.value && passwordInput.value) {
+                    $.ajax({
+                        type: 'post',
+                        url: 'http://localhost:3000/login',
+                        data: {
+                            name: nameInput.value,
+                            password: passwordInput.value
+                        },
+                        success: (result) => {
+                            console.log(result)
+                        },
+                        error: () => {}
+                    })
+                }
+            }
+
+
+
+
+            
+        </script>
+
+        <script src='/js/test.js'></script>
+
+        {%endblock%}
