@@ -1,0 +1,90 @@
+{%extends 'layout.njk'%}
+
+{%block content%}
+    <div>姓名:<input class="name" type="text"/></div>
+
+    <div>
+        性别:
+        <select class="gender">
+            <option value="0">女</option>
+            <option value="1">男</option>
+        </select>
+    </div>
+
+    <div>
+        年龄:
+        <input class="age" type="text"/>
+    </div>
+
+    <div>
+        学科:
+        <select class='major'>
+            <option value="web">web</option>
+            <option value="java">java</option>
+        </select>
+    </div>
+
+    <div>
+
+        <button class="button">提交</button>
+    </div>
+
+    <div class='student-list'>
+        {% for item in students %}
+            <div>
+                <span>
+                    {{item.name}}
+                    {%if item.gender===1%}
+                        男
+                        {%else%}
+                        女
+                        {%endif%}
+                        {{item.age}}岁 学习:{{item.major}}
+                    </span>
+                </div>
+            {% endfor %}
+        </div>
+        {%endblock%}
+
+        {%block script%}
+            <script>
+
+                // 获取selector中option的方式
+
+                function getMajor() {
+                    let majorSelector = document.getElementsByClassName('major')[0];
+                    const index = majorSelector.selectedIndex;
+                    const major = majorSelector.options[index];
+                    return majorValue = major.value;
+                }
+
+                function getGender() {
+                    let genderSelector = document.getElementsByClassName('gender')[0];
+                    const index = genderSelector.selectedIndex;
+                    const gender = genderSelector.options[index];
+                    return genderValue = gender.value;
+                }
+
+                let btn = document.getElementsByClassName('button')[0];
+                let nameEle = document.getElementsByClassName('name')[0];
+                let ageEle = document.getElementsByClassName('age')[0];
+                //console.log(value);
+
+                btn.onclick = function () {
+                    $.ajax({
+                        type: 'post',
+                        url: 'http://localhost:3000/collection',
+                        data: {
+                            name: nameEle.value,
+                            gender: getGender(),
+                            age: ageEle.value,
+                            major: getMajor()
+                        },
+                        success: () => {
+                            alert("提交成功")
+                        }
+
+                    })
+                }
+            </script>
+            {%endblock%}
