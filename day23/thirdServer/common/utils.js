@@ -1,0 +1,17 @@
+//正则要求，检查姓名
+function checkName(name) {
+  var partten = /^[a-zA-Z0-9_-]{4,16}$/
+  return partten.test(name)
+}
+
+
+//正则要求，检查密码
+function checkPassword(password) {
+  var partten = /^\w{8,15}$/
+  return  partten.test(password)
+}
+
+module.exports = {
+  checkName,
+  checkPassword
+}
