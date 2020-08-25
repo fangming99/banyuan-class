@@ -1,0 +1,87 @@
+.container{
+    width: 500px;
+    height: 750px;
+    background-color: rgb(230, 224, 174);
+   margin: 0 auto;
+}
+.main{
+    width: 460px;
+    height: 580px;
+    border: 1px solid rgb(230, 224, 174);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.name{
+    font-size: 18px;
+    /* border: 1px solid black; */
+    width: 150px;
+}
+.price{
+    margin-left: 180px;
+    font-size: 18px;
+
+}
+.re-btn{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    font-size: 18px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+.number{
+    background-color: black;
+    color: white;
+    width: 43px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+
+}
+.de-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}
+.bottom{
+    width: 460px;
+    height: 150px;
+    border-top: 1px solid rgb(105, 100, 100);
+    margin: 0 auto;
+}
+.price-main{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-price{
+    font-size: 24px;
+    margin-top: 20px;
+}
+.bottom-btn{
+    width: 420px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(50, 121, 50);
+    border: none;
+}
